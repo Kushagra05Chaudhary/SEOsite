@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://se-osite-acmr.vercel.app/</loc>
+  </url>
+
+  <url>
+    <loc>https://se-osite-acmr.vercel.app/about.html</loc>
+  </url>
+
+  <url>
+    <loc>https://se-osite-acmr.vercel.app/contact.html</loc>
+  </url>
+
+  <url>
+    <loc>https://se-osite-acmr.vercel.app/blog.html</loc>
+  </url>
+
+  <url>
+    <loc>https://se-osite-acmr.vercel.app/men.html</loc>
+  </url>
+
+  <url>
+    <loc>https://se-osite-acmr.vercel.app/women.html</loc>
+  </url>
+
+  <url>
+    <loc>https://se-osite-acmr.vercel.app/streetwear.html</loc>
+  </url>
+
+</urlset>
