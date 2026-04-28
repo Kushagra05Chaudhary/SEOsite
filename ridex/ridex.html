@@ -654,11 +654,18 @@ footer {
 .kw-banner {
   background: var(--yellow);
   color: var(--black);
-  padding: 1rem 8vw;
-  display: flex;
-  gap: 3rem;
+  padding: 1rem 0;
   overflow: hidden;
   white-space: nowrap;
+}
+.kw-track {
+  display: flex;
+  width: max-content;
+  animation: scrollMarquee 25s linear infinite;
+}
+@keyframes scrollMarquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 .kw-banner span {
   font-family: 'Space Mono', monospace;
@@ -667,6 +674,7 @@ footer {
   text-transform: uppercase;
   font-weight: 700;
   flex-shrink: 0;
+  padding-right: 3rem;
 }
 .kw-banner span::after { content: ' •'; margin-left: 1.5rem; }
 
@@ -684,9 +692,43 @@ footer {
   section { padding: 4rem 5vw; }
   .footer-top { grid-template-columns: 1fr; }
 }
+.fixed-instagram {
+  position: fixed;
+  top: 80px;
+  left: 20px;
+  z-index: 105;
+  width: 44px;
+  height: 44px;
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.fixed-instagram:hover {
+  transform: scale(1.1) translateY(-2px);
+  box-shadow: 0 6px 16px rgba(220, 39, 67, 0.4);
+}
+.fixed-instagram svg {
+  width: 22px;
+  height: 22px;
+}
 </style>
 </head>
 <body>
+
+<!-- FIXED INSTAGRAM ICON -->
+<a href="https://instagram.com/ridexrentals" target="_blank" class="fixed-instagram" aria-label="Instagram">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+  </svg>
+</a>
 
 <!-- NAVBAR -->
 <nav>
@@ -706,7 +748,6 @@ footer {
   <div class="hero-bg"></div>
   <div class="hero-grid-lines"></div>
   <div class="hero-content">
-    <div class="hero-tag">Vehicle Rental Near Me</div>
     <h1 class="hero-title">Ride<br><span class="accent">Smart.</span><br>Ride Free.</h1>
     <p class="hero-subtitle">RideX offers affordable car, bike, and scooter rentals for students, professionals, and tourists — quick booking, zero hassle.</p>
     <div class="hero-actions">
@@ -721,26 +762,33 @@ footer {
   </div>
   <div class="hero-visual">
     <div class="hero-img-placeholder" id="heroImgWrap">
-      <span class="img-icon">🚗</span>
-      <span class="img-label">Click to upload hero image</span>
-      <input type="file" accept="image/*" onchange="uploadImg(this,'heroImgWrap')"/>
+      <img src="images/hero_img_1777052399678.png" alt="Hero Image" class="uploaded" />
     </div>
   </div>
 </section>
 
 <!-- KEYWORD MARQUEE BANNER -->
 <div class="kw-banner">
-  <span>vehicle rental near me</span>
-  <span>car rental near me</span>
-  <span>bike rental near me</span>
-  <span>scooter rent near me</span>
-  <span>self drive car rental</span>
-  <span>cheap bike rental</span>
-  <span>monthly vehicle rental</span>
-  <span>affordable rentals</span>
-  <span>vehicle rental near me</span>
-  <span>car rental near me</span>
-  <span>bike rental near me</span>
+  <div class="kw-track">
+    <span>vehicle rental</span>
+    <span>car rental</span>
+    <span>bike rental</span>
+    <span>scooter rent</span>
+    <span>best vehicle</span>
+    <span>Rental service</span>
+    <span>vehicle rental</span>
+    <span>car rental</span>
+    <span>bike rental</span>
+    <span>scooter rent</span>
+    <span>best vehicle</span>
+    <span>Rental service</span>
+    <span>vehicle rental</span>
+    <span>car rental</span>
+    <span>bike rental</span>
+    <span>scooter rent</span>
+    <span>best vehicle</span>
+    <span>Rental service</span>
+  </div>
 </div>
 
 <!-- SERVICES / FLEET -->
@@ -754,9 +802,7 @@ footer {
     <div class="service-card">
       <div class="service-num">01</div>
       <div class="service-img-wrap" id="carImg">
-        <span class="ph-icon">🚗</span>
-        <span class="ph-text">Click to upload car image</span>
-        <input type="file" accept="image/*" onchange="uploadImg(this,'carImg')"/>
+        <img src="images/car_img_1777052415671.png" alt="Car" class="uploaded" />
       </div>
       <div class="service-icon">🚗</div>
       <div class="service-title">Car Rental</div>
@@ -769,9 +815,7 @@ footer {
     <div class="service-card">
       <div class="service-num">02</div>
       <div class="service-img-wrap" id="bikeImg">
-        <span class="ph-icon">🏍</span>
-        <span class="ph-text">Click to upload bike image</span>
-        <input type="file" accept="image/*" onchange="uploadImg(this,'bikeImg')"/>
+        <img src="images/bike_img_1777052431237.png" alt="Bike" class="uploaded" />
       </div>
       <div class="service-icon">🏍</div>
       <div class="service-title">Bike Rental</div>
@@ -784,9 +828,7 @@ footer {
     <div class="service-card">
       <div class="service-num">03</div>
       <div class="service-img-wrap" id="scoImg">
-        <span class="ph-icon">🛵</span>
-        <span class="ph-text">Click to upload scooter image</span>
-        <input type="file" accept="image/*" onchange="uploadImg(this,'scoImg')"/>
+        <img src="images/sco_img_1777052446459.png" alt="Scooter" class="uploaded" />
       </div>
       <div class="service-icon">🛵</div>
       <div class="service-title">Scooter Rental</div>
@@ -836,11 +878,9 @@ footer {
   <div class="business-layout">
     <div>
       <div class="biz-img-wrap" id="bizImg">
-        <span class="ph-icon">🏢</span>
-        <span class="ph-text">Click to upload business/fleet image</span>
-        <input type="file" accept="image/*" onchange="uploadImg(this,'bizImg')"/>
+        <img src="images/biz_img_1777052468071.png" alt="Business Fleet" class="uploaded" />
       </div>
-      <p class="img-upload-hint">📸 Add your business fleet photo here</p>
+      <p class="img-upload-hint">📸 Business fleet photo</p>
 
       <table class="pricing-table">
         <thead>
@@ -916,25 +956,17 @@ footer {
     </div>
     <div class="about-img-area">
       <div class="about-img-big" id="aboutBig">
-        <span class="ph-icon">🏬</span>
-        <span class="ph-text">Click to upload office / team image</span>
-        <input type="file" accept="image/*" onchange="uploadImg(this,'aboutBig')"/>
+        <img src="images/about_big_1777052485235.png" alt="Office" class="uploaded" />
       </div>
       <div class="about-img-row">
         <div class="about-img-sm" id="aboutSm1">
-          <span class="ph-icon">🚗</span>
-          <span class="ph-text">Fleet photo</span>
-          <input type="file" accept="image/*" onchange="uploadImg(this,'aboutSm1')"/>
+          <img src="images/about_sm1_1777052502985.png" alt="Fleet" class="uploaded" />
         </div>
         <div class="about-img-sm" id="aboutSm2">
-          <span class="ph-icon">😊</span>
-          <span class="ph-text">Customer photo</span>
-          <input type="file" accept="image/*" onchange="uploadImg(this,'aboutSm2')"/>
+          <img src="images/about_sm2_1777052518143.png" alt="Customer" class="uploaded" />
         </div>
         <div class="about-img-sm" id="aboutSm3">
-          <span class="ph-icon">📍</span>
-          <span class="ph-text">Location photo</span>
-          <input type="file" accept="image/*" onchange="uploadImg(this,'aboutSm3')"/>
+          <img src="images/about_sm3_1777052546217.png" alt="Location" class="uploaded" />
         </div>
       </div>
     </div>
@@ -1051,25 +1083,25 @@ footer {
       </div>
     </div>
     <div>
-      <div class="contact-form">
+      <form class="contact-form" id="contactForm">
         <div class="form-row">
           <div class="form-group">
             <label>Your Name</label>
-            <input type="text" placeholder="Kushagra Chaudhary"/>
+            <input type="text" name="name" placeholder="Kushagra Chaudhary" required/>
           </div>
           <div class="form-group">
             <label>Phone Number</label>
-            <input type="tel" placeholder="+91 98765 43210"/>
+            <input type="tel" name="phone" placeholder="+91 98765 43210" required/>
           </div>
         </div>
         <div class="form-group">
           <label>Email Address</label>
-          <input type="email" placeholder="you@email.com"/>
+          <input type="email" name="email" placeholder="you@email.com" required/>
         </div>
         <div class="form-row">
           <div class="form-group">
             <label>Vehicle Type</label>
-            <select>
+            <select name="vehicle_type" required>
               <option>Car Rental</option>
               <option>Bike Rental</option>
               <option>Scooter Rental</option>
@@ -1078,7 +1110,7 @@ footer {
           </div>
           <div class="form-group">
             <label>Duration</label>
-            <select>
+            <select name="duration" required>
               <option>Daily</option>
               <option>Weekly</option>
               <option>Monthly</option>
@@ -1088,10 +1120,10 @@ footer {
         </div>
         <div class="form-group">
           <label>Message / Special Requirements</label>
-          <textarea rows="4" placeholder="Tell us your pickup location, preferred dates, or any special request..."></textarea>
+          <textarea name="message" rows="4" placeholder="Tell us your pickup location, preferred dates, or any special request..." required></textarea>
         </div>
-        <button class="btn-primary" style="align-self:flex-start" onclick="alert('Booking request submitted! We will contact you shortly. 🚗')">Send Booking Request →</button>
-      </div>
+        <button type="submit" class="btn-primary" style="align-self:flex-start">Send Booking Request →</button>
+      </form>
     </div>
   </div>
 </section>
@@ -1138,52 +1170,6 @@ footer {
   </div>
 </footer>
 
-<script>
-// Image upload handler
-function uploadImg(input, wrapperId) {
-  const file = input.files[0];
-  if (!file) return;
-  const reader = new FileReader();
-  reader.onload = function(e) {
-    const wrap = document.getElementById(wrapperId);
-    // Remove placeholder content
-    wrap.querySelectorAll('.ph-icon, .ph-text, .img-icon, .img-label').forEach(el => el.style.display = 'none');
-    // Create or update img
-    let img = wrap.querySelector('img.uploaded');
-    if (!img) { img = document.createElement('img'); img.className = 'uploaded'; wrap.appendChild(img); }
-    img.src = e.target.result;
-  };
-  reader.readAsDataURL(file);
-}
-
-// FAQ accordion
-function toggleFaq(btn) {
-  const answer = btn.nextElementSibling;
-  const isOpen = btn.classList.contains('open');
-  // Close all
-  document.querySelectorAll('.faq-q').forEach(q => {
-    q.classList.remove('open');
-    q.nextElementSibling.classList.remove('open');
-  });
-  // Open clicked if it was closed
-  if (!isOpen) {
-    btn.classList.add('open');
-    answer.classList.add('open');
-  }
-}
-
-// Smooth active nav highlighting
-const sections = document.querySelectorAll('section[id]');
-const navLinks = document.querySelectorAll('.nav-links a');
-window.addEventListener('scroll', () => {
-  let current = '';
-  sections.forEach(s => {
-    if (window.scrollY >= s.offsetTop - 100) current = s.id;
-  });
-  navLinks.forEach(a => {
-    a.style.color = a.getAttribute('href') === '#' + current ? 'var(--yellow)' : '';
-  });
-});
-</script>
+<script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clothing Store Contact - Contact UrbanWear Frequently Asked Questions</title>
+    <meta name="description" content="Get in touch with UrbanWear, your go-to clothing store contact for all fashion queries, orders, and feedback. Browse our FAQs for quick answers.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header id="navbar">
+        <nav class="container">
+            <div class="logo"><a href="index.html" style="text-decoration: none; color: inherit;">UrbanWear</a></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="men.html">Men</a></li>
+                <li><a href="women.html">Women</a></li>
+                <li><a href="streetwear.html">Streetwear</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main style="padding-top: 100px;">
+        <section class="container section-padding">
+            <h1 class="section-title">Clothing Store Contact & FAQ</h1>
+            
+            <div class="faq-section" style="margin-bottom: 4rem;">
+                <h2 style="margin-bottom: 2rem;">Frequently Asked Questions</h2>
+                <div class="faq-grid" style="display: grid; gap: 1.5rem;">
+                    <details class="glass-card">
+                        <summary style="font-weight: 600; cursor: pointer; padding: 1rem;">What is your return policy?</summary>
+                        <p style="padding: 1rem;">We offer a 30-day hassle-free return policy for all items in original condition.</p>
+                    </details>
+                    <details class="glass-card">
+                        <summary style="font-weight: 600; cursor: pointer; padding: 1rem;">Do you ship internationally?</summary>
+                        <p style="padding: 1rem;">Yes, we ship to over 50 countries worldwide. Shipping rates vary by location.</p>
+                    </details>
+                    <details class="glass-card">
+                        <summary style="font-weight: 600; cursor: pointer; padding: 1rem;">How can I track my order?</summary>
+                        <p style="padding: 1rem;">Once your order ships, you will receive an email with a tracking number and link.</p>
+                    </details>
+                </div>
+            </div>
+
+            <div class="contact-form-container glass-card reveal">
+                <h2 style="margin-bottom: 1.5rem;">Send a Message</h2>
+                <form id="contact-form">
+                    <!-- Web3Forms Access Key - Placeholder -->
+                    <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                    
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+                        <div>
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your Name" required style="width: 100%; padding: 0.8rem; border-radius: 8px; border: 1px solid #ddd; margin-top: 0.5rem;">
+                        </div>
+                        <div>
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Your Email" required style="width: 100%; padding: 0.8rem; border-radius: 8px; border: 1px solid #ddd; margin-top: 0.5rem;">
+                        </div>
+                    </div>
+
+                    <div style="margin-bottom: 1rem;">
+                        <label for="query_type">Query Type</label>
+                        <select id="query_type" name="query_type" required style="width: 100%; padding: 0.8rem; border-radius: 8px; border: 1px solid #ddd; margin-top: 0.5rem;">
+                            <option value="">Select an option</option>
+                            <option value="General Inquiry">General Inquiry</option>
+                            <option value="Order Status">Order Status</option>
+                            <option value="Return/Exchange">Return/Exchange</option>
+                            <option value="FAQ Suggestion">FAQ Suggestion</option>
+                        </select>
+                    </div>
+
+                    <div style="margin-bottom: 1.5rem;">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Your Message" required rows="5" style="width: 100%; padding: 0.8rem; border-radius: 8px; border: 1px solid #ddd; margin-top: 0.5rem;"></textarea>
+                    </div>
+
+                    <button type="submit" id="submit-btn" class="btn btn-primary" style="width: 100%;">Submit Request</button>
+                    <div id="form-result" style="margin-top: 1rem; text-align: center; font-weight: 600;"></div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="section-padding">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <h3>UrbanWear</h3>
+                <p>Redefining youth fashion since 2024.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="men.html">Men</a></li>
+                    <li><a href="women.html">Women</a></li>
+                    <li><a href="streetwear.html">Streetwear</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-form">
+                <h4>Get Updates</h4>
+                <form>
+                    <input type="email" placeholder="Your Email">
+                    <button type="submit" class="btn btn-primary">Join Now</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom text-center">
+            <p>&copy; 2024 UrbanWear Clothing Store. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Blog - UrbanWear Trends & Style Guides</title>
+    <meta name="description" content="Stay updated with the latest fashion trends in 2026, streetwear tips, and casual styling guides from UrbanWear.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header id="navbar">
+        <nav class="container">
+            <div class="logo"><a href="index.html" style="text-decoration: none; color: inherit;">UrbanWear</a></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="men.html">Men</a></li>
+                <li><a href="women.html">Women</a></li>
+                <li><a href="streetwear.html">Streetwear</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main style="padding-top: 100px;">
+        <section class="container section-padding">
+            <h1 class="section-title">UrbanWear Fashion Blog</h1>
+            
+            <div class="blog-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem;">
+                <!-- Article 1 -->
+                <article class="glass-card reveal">
+                    <h2>Top Fashion Trends in 2026</h2>
+                    <p style="margin: 1rem 0;">From sustainable materials to high-tech fabrics, 2026 is redefining the future of urban fashion. Explore how minimalism meets cyberpunk aesthetics this year.</p>
+                    <a href="#" class="btn btn-secondary">Read More</a>
+                </article>
+
+                <!-- Article 2 -->
+                <article class="glass-card reveal">
+                    <h2>Best Streetwear Outfits for Students</h2>
+                    <p style="margin: 1rem 0;">Stay comfy and stylish on campus. We break down the essential streetwear pieces every college student needs in their wardrobe.</p>
+                    <a href="#" class="btn btn-secondary">Read More</a>
+                </article>
+
+                <!-- Article 3 -->
+                <article class="glass-card reveal" id="best-casual-outfits-men">
+                    <h2>How to Style Casual Clothes for Daily Wear</h2>
+                    <p style="margin: 1rem 0;">Casual doesn't have to be boring. Learn how to layer basics and accessorize to elevate your everyday outfit with ease.</p>
+                    <a href="#" class="btn btn-secondary">Read More</a>
+                </article>
+
+                <!-- Article 4 -->
+                <article class="glass-card reveal">
+                    <h2>Summer Outfit Ideas for Men and Women</h2>
+                    <p style="margin: 1rem 0;">Beat the heat with our curated summer styles. From breathable fabrics to vibrant colors, find your perfect summer look here. Don't forget to check out our <a href="women.html" style="color: var(--accent); font-weight: 700;">Women's Clothing Page</a> for the latest summer dresses!</p>
+                    <a href="#" class="btn btn-secondary">Read More</a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="section-padding">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <h3>UrbanWear</h3>
+                <p>Redefining youth fashion since 2024.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Blog Categories</h4>
+                <ul>
+                    <li><a href="#">Trends</a></li>
+                    <li><a href="#">Guides</a></li>
+                    <li><a href="#">Lifestyle</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-form" id="contact">
+                <h4>Get Updates</h4>
+                <form>
+                    <input type="email" placeholder="Your Email">
+                    <button type="submit" class="btn btn-primary">Join Now</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom text-center">
+            <p>&copy; 2024 UrbanWear Clothing Store. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
